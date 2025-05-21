@@ -8,9 +8,9 @@ parser.add_argument('--visual-length', default=256, type=int)
 parser.add_argument('--visual-width', default=512, type=int)
 parser.add_argument('--visual-head', default=2,type=int) # Train = 2, Test = 2
 parser.add_argument('--visual-layers', default=2, type=int)
-parser.add_argument('--attn-window', default=4, type=int)# Train = 16, Test = 4
-parser.add_argument('--prompt-prefix', default=5, type=int) # Train = 10, Test = 5
-parser.add_argument('--prompt-postfix', default=15, type=int) # Train = 10  # Test = 15
+parser.add_argument('--attn-window', default=16, type=int)# Train = 16, Test = 4
+parser.add_argument('--prompt-prefix', default=10, type=int) # Train = 10, Test = 5
+parser.add_argument('--prompt-postfix', default=10, type=int) # Train = 10  # Test = 15
 parser.add_argument('--classes-num', default=14, type=int) 
 
 parser.add_argument('--max-epoch', default=10, type=int)
@@ -18,7 +18,7 @@ parser.add_argument('--max-epoch', default=10, type=int)
 parser.add_argument('--model-path', default='model/model_ucf_80.pth') 
 parser.add_argument('--use-checkpoint', default=False, type=bool)
 parser.add_argument('--checkpoint-path', default='model/checkpoint.pth')
-parser.add_argument('--batch-size', default=32,type=int) # for testing its always 1 
+parser.add_argument('--batch-size', default=32,type=int) 
 parser.add_argument('--train-list', default='list/ucf_CLIP_rgb.csv')
 parser.add_argument('--test-list', default='list/ucf_CLIP_rgbtest.csv')
 
