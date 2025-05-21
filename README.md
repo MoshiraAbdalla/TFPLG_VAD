@@ -48,8 +48,9 @@ Features/
 ### 2. Pretrained Models
 
 Download our pretrained models from the following link:  
-XD-Violence [https://1drv.ms/u/c/2341e8a43b5b6eef/EZ58rA1q8R1ArD5HVYvS9JcBE0IsTqhPGlct0Mctmrq3GQ?e=dkjkG1]
-UCF_Crime [https://1drv.ms/u/c/2341e8a43b5b6eef/ERPQRgHNTS5DoDgW7QvrWksBKhRkpIm1LrUp1FIznXVLCA?e=ytCriZ]
+XD-Violence: [https://1drv.ms/u/c/2341e8a43b5b6eef/EZ58rA1q8R1ArD5HVYvS9JcBE0IsTqhPGlct0Mctmrq3GQ?e=dkjkG1]
+
+UCF_Crime: [https://1drv.ms/u/c/2341e8a43b5b6eef/ERPQRgHNTS5DoDgW7QvrWksBKhRkpIm1LrUp1FIznXVLCA?e=ytCriZ]
 
 Save the downloaded model files under:
 
