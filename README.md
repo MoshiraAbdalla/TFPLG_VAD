@@ -12,7 +12,7 @@ The figure above illustrates the overall framework of our method, which includes
 - (A) CLIP Feature Extraction for both vision and text modalities.
 - (B) Vision Branch for binary classification using a transformer and GCN.
 - (C) Fine-grained Classification Branch with visual prompt interaction.
-- (D) Pseudo Label Generation Branch that aligns normal-guided textual embeddings with visual features.
+- (D) Pseudo Label Generation Branch that aligns text descriptions with video segments to refine frame-level labels.
 
 ---
 
@@ -34,13 +34,13 @@ To run or train the model, you will need pre-extracted features:
 Save all features under a folder named `src/Features/`:
 
 Features/
-        ├── XDTestClipFeatures/
+            ├── XDTestClipFeatures/
 
-        ├── XDTrainClipFeatures/
+            ├── XDTrainClipFeatures/
 
-        ├── UCFClipFeatures/
+            ├── UCFClipFeatures/
 
-        ├── MSADfeatures/
+            ├── MSADfeatures/
 
 
 
@@ -51,7 +51,6 @@ Download our pretrained models from the following link:
 
 Save the downloaded model files under:
 
-```python
 
 src/model/
 
@@ -62,7 +61,7 @@ src/model/
 
 To test the pretrained model on UCF-Crime:
 
-```python
+```python 
 python ucf_test.py
 
 To train the model from scratch on UCF-Crime:
