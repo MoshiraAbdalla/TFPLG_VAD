@@ -124,7 +124,6 @@ def train(model, train_loader, test_loader, args, label_map: dict, device):
             visual_features_abr = torch.zeros(0).to(device)
             num_zeros=0
             # Iterate through the text labels and concatenate the values to the corresponding tensors
-            # Initialize an empty list to store the indices
             normal_indices = []
             abnormal_indices =[]
 
