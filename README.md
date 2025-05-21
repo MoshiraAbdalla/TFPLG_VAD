@@ -34,10 +34,14 @@ To run or train the model, you will need pre-extracted features:
 Save all features under a folder named `src/Features/`:
 
 Features/
-├── XDTestClipFeatures/
-├── XDTrainClipFeatures/
-├── UCFClipFeatures/
-├── MSADfeatures/
+        ├── XDTestClipFeatures/
+
+        ├── XDTrainClipFeatures/
+
+        ├── UCFClipFeatures/
+
+        ├── MSADfeatures/
+
 
 
 ### 2. Pretrained Models
@@ -47,23 +51,43 @@ Download our pretrained models from the following link:
 
 Save the downloaded model files under:
 
-src/model/
+```python
 
+src/model/
 
 
 ## ✅ Running the Model
 
-### UCF-Crime Evaluation
+### 🧪 UCF-Crime Evaluation
 
 To test the pretrained model on UCF-Crime:
 
+```python
 python ucf_test.py
-
 
 To train the model from scratch on UCF-Crime:
 
+```python
 python ucf_train_80.py
 
+### 🧪 XD-Violence Training and Testing
+To train the model on XD-Violence:
+
+```python
+
+python xd_train.py
+
+To test the pretrained model on XD-Violence:
+
+```python
+python xd_test.py
+
+##🧪 MSAD Evaluation
+To test the model on the MSAD dataset:
+
+```python
+
+python MSAD_test.py
 
 
 You can configure various training and testing settings by editing the corresponding option files:
@@ -82,7 +106,7 @@ We sincerely thank the authors of the VADCLIP repository (https://github.com/nwp
 
 ## 📄 Citation
 
-If you use this code in your research, please cite our paper:
+If you find this repo is useful in your research, please cite our paper:
 
 @article{MoshiraTFPLG,
 title={Training-Free Pseudo Label Generation for Weakly Supervised Video Anomaly Detection},
