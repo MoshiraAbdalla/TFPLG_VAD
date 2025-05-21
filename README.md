@@ -48,7 +48,8 @@ Features/
 ### 2. Pretrained Models
 
 Download our pretrained models from the following link:  
-[Insert model download link here]
+XD-Violence [https://1drv.ms/u/c/2341e8a43b5b6eef/EZ58rA1q8R1ArD5HVYvS9JcBE0IsTqhPGlct0Mctmrq3GQ?e=dkjkG1]
+UCF_Crime [https://1drv.ms/u/c/2341e8a43b5b6eef/ERPQRgHNTS5DoDgW7QvrWksBKhRkpIm1LrUp1FIznXVLCA?e=ytCriZ]
 
 Save the downloaded model files under:
 
@@ -69,7 +70,7 @@ python ucf_test.py
 To train the model from scratch on UCF-Crime:
 
 ```python
-python ucf_train_80.py
+python ucf_train.py
 ```
 ### 🧪 XD-Violence Training and Testing
 To train the model on XD-Violence:
@@ -110,7 +111,7 @@ We sincerely thank the authors of the VADCLIP repository (https://github.com/nwp
 If you find this repo is useful in your research, please cite our paper:
 ```
 @article{MoshiraTFPLG,
-title={Training-Free Pseudo Label Generation for Weakly Supervised Video Anomaly Detection},
+title={TFPLG: Training-Free Pseudo Label Generation for Weakly Supervised Video Anomaly Detection},
 author={Moshira, A. and Sajid, j},
 journal={IEEE Access},
 year={2025},
