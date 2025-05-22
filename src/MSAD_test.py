@@ -5,7 +5,6 @@ from utils.dataset import XDDataset
 import time
 import MSAD_option
 from torch.utils.data import DataLoader, TensorDataset, RandomSampler
-from model import CLIPVAD
 import torch
 from sklearn.metrics import average_precision_score, roc_auc_score
 from sklearn.preprocessing import label_binarize
@@ -17,6 +16,7 @@ import matplotlib.pyplot as plt
 import os
 import torch
 import numpy as np
+from ucf_test import test
 
 
 import pandas as pd
@@ -106,7 +106,12 @@ def test(model, testdataloader, maxlen, prompt_text, gt, gtsegments, gtlabels, d
 
     print("AUC1: ", ROC1, " AP1: ", AP1)
   
-        
+
+
+
+
+
+  
 
     return ROC1, AP1
 
@@ -117,6 +122,8 @@ if __name__ == '__main__':
     label_map = dict({'Assault': 'Assault',   'Explosion': 'Explosion', 'Fighting': 'Fighting', 'Fire':'Fire',  'Object_falling' : 'Object_falling','People_falling':'People_falling','Robbery':'Robbery','Shooting':'Shooting','Traffic_accident':'Traffic_accident','Vandalism':'Vandalism','Water_incident':'Water_incident','Normal': 'Normal'})
     test_dataset = XDDataset(args.visual_length, args.test_list, True, label_map)
     testdataloader = DataLoader(test_dataset, batch_size=1, shuffle=False)
+    # testdataset = UCFDataset(args.visual_length, args.test_list, True, label_map)
+    # testdataloader = DataLoader(testdataset, batch_size=1, shuffle=False)
 
     prompt_text = get_prompt_text(label_map)
     gt_df = pd.read_excel("./list/final_ground_truth.xlsx", engine='openpyxl') # this is only to match the abnormal from the i3d 

@@ -26,6 +26,8 @@ def test(model, testdataloader, maxlen, prompt_text, gt, gtsegments, gtlabels, d
 
     with torch.no_grad():
         for i, item in enumerate(testdataloader):
+            # if i >= 140: # this is to calculate the AUC_anomaly videos only:134 
+            #     break
             visual = item[0].squeeze(0)
             length = item[2]
 
@@ -111,9 +113,12 @@ def test(model, testdataloader, maxlen, prompt_text, gt, gtsegments, gtlabels, d
 
     ROC1 = roc_auc_score(gt, np.repeat(ap1, 16))
 
-    AP1 = average_precision_score(gt, np.repeat(ap1, 16))
 
-    
+    AP1 = average_precision_score(gt, np.repeat(ap1, 16))
+    # #this is to calculate the AUC_anomaly videos only:134 
+    # ROC1 = roc_auc_score(gt[0:len(np.repeat(ap1, 16))], np.repeat(ap1, 16))
+    # AP1 = average_precision_score(gt[0:len(np.repeat(ap1, 16))], np.repeat(ap1, 16))
+
     print("AUC1: ", ROC1)
 
 
