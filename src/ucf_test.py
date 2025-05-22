@@ -118,9 +118,7 @@ def test(model, testdataloader, maxlen, prompt_text, gt, gtsegments, gtlabels, d
     # #this is to calculate the AUC_anomaly videos only:134 
     # ROC1 = roc_auc_score(gt[0:len(np.repeat(ap1, 16))], np.repeat(ap1, 16))
     # AP1 = average_precision_score(gt[0:len(np.repeat(ap1, 16))], np.repeat(ap1, 16))
-
     print("AUC1: ", ROC1)
-
 
     dmap, iou = dmAP(element_logits2_stack, gtsegments, gtlabels, excludeNormal=False)
     averageMAP = 0
