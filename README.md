@@ -1,7 +1,7 @@
 
 # Training-Free VLM-Based Pseudo Label Generation for Video Anomaly Detection
 
-This repository contains the official implementation of our IEEE Access paper on **Training-Free Pseudo Label Generation (TFPLG)** using vision-language models (CLIP) for Weakly Supervised Video Anomaly Detection (WSVAD).
+This repository contains the official implementation of our IEEE Access paper 2025 on **Training-Free Pseudo Label Generation (TFPLG)** using vision-language models (CLIP) for Weakly Supervised Video Anomaly Detection (WSVAD).
 
 ## 📊 Framework Overview
 
