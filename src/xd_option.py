@@ -2,7 +2,6 @@ import argparse
 
 parser = argparse.ArgumentParser(description='VadCLIP')
 parser.add_argument('--seed', default=234, type=int)
-
 parser.add_argument('--embed-dim', default=512, type=int)
 parser.add_argument('--visual-length', default=256, type=int)
 parser.add_argument('--visual-width', default=512, type=int)

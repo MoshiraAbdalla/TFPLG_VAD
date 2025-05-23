@@ -59,7 +59,13 @@ Save the downloaded model files under:
 src/model/
 ```
 
-## ✅ Running the Model
+## ✅ Running the Models
+
+To replicate the reported results, please refer to the implementation details section for the exact configuration setup.
+You can customize training and testing settings by modifying the corresponding option files:
+- `ucf_option.py` for UCF-Crime
+- `xd_option.py` for XD-Violence
+- `MSAD_option.py` for MSAD
 
 ### 🧪 UCF-Crime Evaluation
 
@@ -93,11 +99,6 @@ To test the model on the MSAD dataset:
 python MSAD_test.py
 ```
 
-You can configure various training and testing settings by editing the corresponding option files:
-
-- `ucf_option.py` for UCF-Crime
-- `xd_option.py` for XD-Violence
-- `MSAD_option.py` for MSAD
 
 ---
 
