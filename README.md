@@ -99,7 +99,6 @@ To test the model on the MSAD dataset:
 python MSAD_test.py
 ```
 
-
 ---
 
 ## 🙏 Acknowledgements
