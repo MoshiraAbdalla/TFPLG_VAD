@@ -217,22 +217,21 @@ class CLIPVAD(nn.Module):
     
         logits1 = self.classifier(visual_features + self.mlp2(visual_features))
 
-        # Encode text features
+
         realanomalyembeddings=self.encode_textprompt(textlabels)
         text_features_ori = self.encode_textprompt(text)  
-        # Apply attention mechanism
         text_features = text_features_ori
 
 
         logits_attn = logits1.permute(0, 2, 1)
-        visual_attn = logits_attn @ visual_features # V= NORM(Anomaly confidence^T *visual features)
-        visual_attn = visual_attn / visual_attn.norm(dim=-1, keepdim=True) # V= NORM(Anomaly confidence^T *visual features)
+        visual_attn = logits_attn @ visual_features 
+        visual_attn = visual_attn / visual_attn.norm(dim=-1, keepdim=True) 
         visual_attn = visual_attn.expand(visual_attn.shape[0], text_features_ori.shape[0], visual_attn.shape[2]) 
         text_features = text_features_ori.unsqueeze(0)
         text_features = text_features.expand(visual_attn.shape[0], text_features.shape[1], text_features.shape[2])
 
         text_features = text_features + visual_attn #T=ADD(V,tout)
-        text_features = text_features + self.mlp1(text_features) #T=FFN(ADD(V,tout))+tout
+        text_features = text_features + self.mlp1(text_features) 
 
         # Normalize features and compute logits2
         visual_features_norm = visual_features / visual_features.norm(dim=-1, keepdim=True)
