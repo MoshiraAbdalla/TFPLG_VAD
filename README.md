@@ -111,11 +111,12 @@ We sincerely thank the authors of the VADCLIP repository (https://github.com/nwp
 
 If you find this repo is useful in your research, please cite our paper:
 ```
-@article{MoshiraTFPLG,
-title={Training-Free Pseudo Label Generation for Weakly Supervised Video Anomaly Detection},
-author={Moshira, A. and Sajid, j},
-journal={IEEE Access},
-year={2025},
-publisher={IEEE}
+@article{abdalla2025training,
+  title={Training-Free VLM-Based Pseudo Label Generation for Video Anomaly Detection},
+  author={Abdalla, Moshira and Javed, Sajid},
+  journal={IEEE Access},
+  year={2025},
+  publisher={IEEE}
 }
 ```
+
