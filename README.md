@@ -15,7 +15,10 @@ The figure above illustrates the overall framework of our method, which includes
 - (D) Pseudo Label Generation Branch that aligns text descriptions with video segments to refine frame-level labels.
 
 ---
+## Demo Video
 
+[Watch the demo video](https://moshiraabdalla.github.io/videos/trainingfreePL_xd.mp4)
+----
 ## 🔧 Setup Instructions
 
 ### 1. Feature Preparation
